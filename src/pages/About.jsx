@@ -1,3 +1,5 @@
+import founderSamuel from "../assets/images/founder-samuel.jpg";
+
 const About = () => {
   return (
     <div>
@@ -34,7 +36,11 @@ const About = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-4xl font-bold mb-12 text-center">Meet Our Founder</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="bg-primary-200 rounded-xl aspect-square"></div>
+              <img
+                src={founderSamuel}
+                alt="Samuel Odoi-Laryea - Founder & Executive Director"
+                className="rounded-xl aspect-square object-cover shadow-lg w-full h-full"
+              />
               <div>
                 <h3 className="text-3xl font-bold mb-4">Samuel Odoi-Laryea</h3>
                 <p className="text-xl text-primary-600 font-semibold mb-6">Founder & Executive Director</p>

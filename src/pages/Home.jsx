@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import heroBackground from "../assets/images/hero-background.jpg";
 
 const Home = () => {
   const fadeInUp = {
@@ -12,7 +13,12 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white">
-        <div className="section-container section-padding">
+        {/* Background Image Overlay */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{ backgroundImage: `url(${heroBackground})` }}
+        />
+        <div className="section-container section-padding relative z-10">
           <div className="max-w-4xl">
             <motion.h1
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"

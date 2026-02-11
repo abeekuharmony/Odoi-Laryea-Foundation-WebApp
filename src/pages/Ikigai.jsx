@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import ikigaiFront from "../assets/images/ikigai-front.jpg";
 
 const Ikigai = () => {
   const [email, setEmail] = useState("");
@@ -121,29 +122,14 @@ const Ikigai = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
             >
-              {/* Book Mockup Placeholder - Replace with actual image */}
+              {/* Book Cover Image */}
               <div className="relative mx-auto max-w-md">
                 <div className="relative z-10 bg-gradient-to-br from-white to-gray-100 rounded-xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <div className="aspect-[3/4] bg-gradient-to-br from-primary-500 to-secondary-600 rounded-lg flex flex-col items-center justify-center p-8 text-white">
-                    <div className="text-center">
-                      <div className="mb-4">
-                        <svg
-                          className="w-20 h-20 mx-auto"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                        </svg>
-                      </div>
-                      <h3 className="text-3xl font-bold mb-2">UNLOCKING YOU</h3>
-                      <p className="text-lg mb-4">
-                        The Ikigai Workbook for Young Dreamers
-                      </p>
-                      <div className="border-t border-white/30 pt-4">
-                        <p className="font-semibold">Samuel Odoi-Laryea</p>
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src={ikigaiFront}
+                    alt="Unlocking You - The Ikigai Workbook for Young Dreamers by Samuel Odoi-Laryea"
+                    className="aspect-[3/4] w-full h-full object-cover rounded-lg shadow-lg"
+                  />
                 </div>
                 {/* Shadow effect */}
                 <div className="absolute inset-0 bg-primary-900/20 blur-2xl rounded-xl transform translate-y-8"></div>
@@ -596,7 +582,11 @@ const Ikigai = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="aspect-square bg-gradient-to-br from-primary-400 to-secondary-400 rounded-2xl"></div>
+                <img
+                  src={ikigaiFront}
+                  alt="Unlocking You Book Cover"
+                  className="aspect-square w-full h-full object-cover rounded-2xl shadow-lg"
+                />
               </motion.div>
 
               <motion.div
@@ -725,19 +715,11 @@ const Ikigai = () => {
               <div className="p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
                   <div>
-                    <div className="bg-gradient-to-br from-primary-500 to-secondary-600 aspect-[3/4] rounded-lg flex items-center justify-center text-white p-8">
-                      <div className="text-center">
-                        <svg
-                          className="w-24 h-24 mx-auto mb-4"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                        </svg>
-                        <h3 className="text-2xl font-bold">UNLOCKING YOU</h3>
-                        <p className="text-sm mt-2">The Ikigai Workbook</p>
-                      </div>
-                    </div>
+                    <img
+                      src={ikigaiFront}
+                      alt="Unlocking You - The Ikigai Workbook"
+                      className="aspect-[3/4] w-full h-full object-cover rounded-lg shadow-lg"
+                    />
                   </div>
 
                   <div>

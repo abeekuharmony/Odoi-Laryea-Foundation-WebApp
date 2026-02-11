@@ -23,7 +23,18 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
+            {/* Replace /logo.png with your actual logo file in the public folder */}
+            <img
+              src="/logo.png"
+              alt="Odoi-Laryea Foundation Logo"
+              className="w-12 h-12 rounded-lg object-contain"
+              onError={(e) => {
+                // Fallback to placeholder if logo doesn't exist
+                e.target.style.display = 'none';
+                e.target.nextElementSibling.style.display = 'flex';
+              }}
+            />
+            <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center" style={{display: 'none'}}>
               <span className="text-white font-bold text-xl">OLF</span>
             </div>
             <div className="hidden sm:block">
